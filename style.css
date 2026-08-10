@@ -1,0 +1,14 @@
+.align,
+.align-off {
+    display: flex;
+    gap: 5px;
+}
+
+.align *,
+.align-off * {
+    max-width:(vw/2);
+}
+
+.align:nth-child(even){
+    flex-direction:row-reverse;
+}
