@@ -33,7 +33,12 @@ h6 {
     display: block !important;
     text-align: center !important;
     width: 100% !important;
-    background-color: yellow !important;
+}
+
+h1 sup {
+    vertical-align: super !important;
+    font-size: 0.6em !important;
+    margin-left: 2px !important;
 }
 
 .align:nth-child(even){
