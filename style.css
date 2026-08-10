@@ -11,6 +11,12 @@
     max-width:50vw;
 }
 
+.align-off p {
+    word-break: break-word;
+    overflow-wrap: break-word;
+    margin:0;
+}
+
 .align:nth-child(even){
     flex-direction:row-reverse;
 }
