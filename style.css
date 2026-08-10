@@ -5,8 +5,8 @@
     max-height: 750px;
 }
 
-.align *,
-.align-off * {
+.align > *,
+.align-off > div {
     max-width:(vw/2);
 }
 
