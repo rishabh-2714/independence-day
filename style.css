@@ -2,6 +2,7 @@
 .align-off {
     display: flex;
     gap: 5px;
+    max-height: 750px;
 }
 
 .align *,
