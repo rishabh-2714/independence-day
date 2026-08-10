@@ -30,9 +30,10 @@ h3,
 h4,
 h5,
 h6 {
+    display: flex !important;
+    justify-content: center;
+    align-items: baseline;
     width: 100%;
-    box-sizing: border-box;
-    text-align:center;
 }
 
 .align:nth-child(even){
