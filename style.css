@@ -7,6 +7,7 @@
 
 .align > *,
 .align-off > div {
+    min-width:0;
     max-width:(vw/2);
 }
 
