@@ -3,6 +3,6 @@ const imgSrcs=["assets/IndiaFlag.png", "assets/IndiaEmblem.png", "assets/BengalT
 ];
 let i=0;
 function cycleImages() {
-    i=(i<imgSrcs.length?i+1:0);
+    i=(i<imgSrcs.length-1?i+1:0);
     document.getElementById('symbols').src=imgSrcs[i];
 }
