@@ -57,6 +57,25 @@ createAlign({
     color: "rgb(255, 255, 255)"
 }, 'ml');
 
+createAlign({
+    mediaH: "Symbols of the British Raj", 
+    src: "assets/Brits.png",
+    alt: "British Flag",
+    imgAttr: [
+        ["onclick", "cycleImages(['assets/Brits.png', 'assets/BritRaj.png', 'assets/Gateway.png'])"]
+    ],
+    explain: `
+    The British were the dominant European empire who emerged over South Asia after the Scrambles for Africa and India, and their oppressive Western methods caused 
+    massacres in India leading to the final revolutions. While the Portuguese had Goa and the French had Pondicherry (Puducherry), the British had dominion across the 
+    subcontinent. They used pig and cow lard in their guns first, leading to the Revolt of 1857 when Hindu and Muslim alike protested having to bite the lard off. 
+    They segregated Indians from their better sections of public spaces, which caused resentment, but worse, used 'Divide and Rule' strategies to pit the Hindus and 
+    Muslims against each other. The Jallianwala Bagh Massacre and other similar genocides occurred mostly during peaceful protest when a soldier accidentally fired a 
+    cannon or a general got exasperated. All of this led to more protests and the hope for independence, which the British finally granted when they were nearly 
+    bankrupt after WW𝐼𝐼.
+    `,
+    color: "rgb(4, 106, 56)"
+}, 'br');
+
 function createAlign(data, id) {
     const temp = document.querySelector('#template');
   console.log('temp:', temp);
