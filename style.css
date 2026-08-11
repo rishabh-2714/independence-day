@@ -21,6 +21,11 @@
     margin:0;
 }
 
+.align-off h2 {
+    width: auto !important;
+}
+
+
 h1 {
     display: block;
     clear: both;
