@@ -51,7 +51,7 @@ function createAlign(data, id) {
     const explain=workspace.querySelector('.exp');
     const exp=explain.querySelector('p');
     exp.innerHTML=data.explain;
-    workspace.style.backgroundColor=data.color;
+    workspace.querySelector('.align-off').style.backgroundColor=data.color;
 
     console.log('About to append to:', document.getElementById(id));
     document.getElementById(id).appendChild(workspace);
