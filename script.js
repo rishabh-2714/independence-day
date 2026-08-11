@@ -8,6 +8,11 @@ let i=0;
 function cycleImages(srcArr) {
     i=(i<srcArr.length-1?i+1:0);
     document.getElementById('symbols').src=imgSrcs[i];
+    if (srcArr[i].includes("Radcliffe")) {
+        img.alt = "The Radcliffe Line";
+    } else if (srcArr[i].includes("Propa")) {
+        img.alt = "Propaganda pro-Pakistan Map from the All-India Muslim League";
+    }
 }
 
 createAlign({
@@ -33,7 +38,8 @@ createAlign({
 createAlign({
     mediaH: "Important Maps",
     src: "assets/Radcliffe.png",
-    alt: `${img.src=="assets/Radcliffe.png"?"The Radcliffe Line":"Propaganda pro-Pakistan Map from the All-India Muslim League"}`,
+    alt1: "The Radcliffe Line",
+    alt2: "Propaganda from the AIML",
     imgAttr: [
         ["onclick", "cycleImages(['assets/Radcliffe.png', 'assets/Propa.png'])"]
     ],
@@ -65,7 +71,13 @@ function createAlign(data, id) {
     mHead.innerHTML=data.mediaH;
     const img=media.querySelector('img');
     img.src=data.src;
-    img.alt=data.alt;
+    if (data.src.includes("Radcliffe") && data.alt1) {
+        img.alt = data.alt1;
+    } else if (data.src.includes("Propa") && data.alt2) {
+        img.alt = data.alt2;
+    } else {
+        img.alt = data.alt;
+    }
     for(let i=0;i<data.imgAttr.length;i++){
         img.setAttribute(data.imgAttr[i][0], data.imgAttr[i][1]);
     }
