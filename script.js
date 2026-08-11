@@ -7,6 +7,10 @@ function cycleImages() {
     document.getElementById('symbols').src=imgSrcs[i];
 }
 
+createAlign({
+    mediaH: "Freedom Fighters"
+})
+
 function createAlign(data, id) {
     const temp=document.querySelector('#template');
     const workspace=temp.content.cloneNode(true);
@@ -17,6 +21,9 @@ function createAlign(data, id) {
     const img=media.querySelector('img');
     img.src=data.Src;
     img.alt=data.Alt;
+    for(let i=0;i<data.imgAttr.length;i++){
+        img.style.setProperty(data.imgAttr[i][0], data.imgAttr[i][1]);
+    }
     
     const explain=workspace.querySelector('.exp');
     const exp=explain.querySelector('p');
