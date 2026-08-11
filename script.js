@@ -32,6 +32,10 @@ createAlign({
 
 function createAlign(data, id) {
     const temp=document.querySelector('#template');
+    if (!temp) {
+        console.error('Template not found');
+        return;
+    }
     const workspace=temp.content.cloneNode(true);
     
     const media=workspace.querySelector('.pic');
