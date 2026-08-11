@@ -69,5 +69,5 @@ h1 sup {
 
 div.align-off,
 div.align {
-    max-height: fit-content;
+    max-height: 500px;
 }
