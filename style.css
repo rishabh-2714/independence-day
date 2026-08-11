@@ -25,6 +25,10 @@
     width: auto !important;
 }
 
+div:has(> img) {
+    text-align: center;
+}
+
 
 h1 {
     display: block;
