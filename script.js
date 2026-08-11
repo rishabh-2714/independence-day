@@ -45,8 +45,6 @@ function createAlign(data, id) {
     const img=media.querySelector('img');
     img.src=data.src;
     img.alt=data.alt;
-    img.height=`${workspace.firstElementChild.height-30}px`;
-    img.width='auto';
     for(let i=0;i<data.imgAttr.length;i++){
         img.setAttribute(data.imgAttr[i][0], data.imgAttr[i][1]);
     }

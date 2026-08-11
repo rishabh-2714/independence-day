@@ -61,3 +61,8 @@ h1 sup {
 .align:nth-child(even){
     flex-direction:row-reverse;
 }
+
+.pic img {
+    max-height: 99%;
+    width: auto;
+}
