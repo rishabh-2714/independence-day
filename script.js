@@ -5,13 +5,21 @@ const fFs=["assets/Gandhi.png", "assets/Nehru.png", "assets/Jinnah.png", "assets
     "assets/Liaquat.png", "assets/LBP.png", "assets/JhansiRani.png", "assets/Pandey.png"
 ]
 let i=0;
-function cycleImages(srcArr, img) {
-    i=(i<srcArr.length-1?i+1:0);
-    img.src=imgSrcs[i];
-    if (srcArr[i].includes("Radcliffe")) {
-        img.alt = "The Radcliffe Line";
-    } else if (srcArr[i].includes("Propa")) {
-        img.alt = "Propaganda pro-Pakistan Map from the All-India Muslim League";
+function cycleImages(srcArr, imgElement) {
+    if (!imgElement.dataset.cycleIndex) {
+        imgElement.dataset.cycleIndex = 0;
+    }
+    
+    let idx = parseInt(imgElement.dataset.cycleIndex);
+    idx = (idx < srcArr.length - 1 ? idx + 1 : 0);
+    imgElement.dataset.cycleIndex = idx;
+    
+    imgElement.src = srcArr[idx];
+    
+    if (srcArr[idx].includes("Radcliffe")) {
+        imgElement.alt = "The Radcliffe Line";
+    } else if (srcArr[idx].includes("Propa")) {
+        imgElement.alt = "Propaganda from the AIML";
     }
 }
 
