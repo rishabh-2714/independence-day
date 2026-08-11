@@ -45,8 +45,8 @@ function createAlign(data, id) {
     const img=media.querySelector('img');
     img.src=data.src;
     img.alt=data.alt;
-    img.max-height=workspace.firstElementChild.height;
-    img.max-width=workspace.firstElementChild.width/5;
+    img.maxHeight=workspace.firstElementChild.height;
+    img.maxWidth=workspace.firstElementChild.width/5;
     for(let i=0;i<data.imgAttr.length;i++){
         img.setAttribute(data.imgAttr[i][0], data.imgAttr[i][1]);
     }
