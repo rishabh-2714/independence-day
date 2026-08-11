@@ -99,8 +99,9 @@ function createAlign(data, id) {
     }
     for(let i=0;i<data.imgAttr.length;i++){
         if(data.imgAttr[i][0] === "onclick") {
+            const srcArr = eval(data.imgAttr[i][1].match(/\[(.*?)\]/)[0]);
             img.onclick = function() {
-                cycleImages(data.imgAttr[i][1], this);
+                cycleImages(srcArr, this);
             };
         } else {
             img.setAttribute(data.imgAttr[i][0], data.imgAttr[i][1]);
