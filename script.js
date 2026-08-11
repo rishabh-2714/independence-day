@@ -21,5 +21,8 @@ function createAlign(data, id) {
     const explain=workspace.querySelector('.exp');
     const exp=explain.querySelector('p');
     exp.innerHTML=data.explain;
-    workspace.style.background-color=data.color;
+    workspace.style.backgroundColor=data.color;
+
+
+    document.getElementById(id).appendChild(workspace);
 }
