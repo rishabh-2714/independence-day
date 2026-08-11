@@ -5,9 +5,9 @@ const fFs=["assets/Gandhi.png", "assets/Nehru.png", "assets/Jinnah.png", "assets
     "assets/Liaquat.png", "assets/LBP.png", "assets/JhansiRani.png", "assets/Pandey.png"
 ]
 let i=0;
-function cycleImages(srcArr) {
+function cycleImages(srcArr, img) {
     i=(i<srcArr.length-1?i+1:0);
-    document.getElementById('symbols').src=imgSrcs[i];
+    img.src=imgSrcs[i];
     if (srcArr[i].includes("Radcliffe")) {
         img.alt = "The Radcliffe Line";
     } else if (srcArr[i].includes("Propa")) {
@@ -20,7 +20,7 @@ createAlign({
     src: "assets/Gandhi.png",
     alt: "Image of a Freedom Fighter",
     imgAttr: [
-        ["onclick", "cycleImages(fFs)"]
+        ["onclick", "cycleImages(fFs, this)"]
     ],
     explain: `
     India's freedom was championed by many freedom fighters, such as Lal Bal Pal, Bhagat Singh, and the Indian National Congress
@@ -41,7 +41,7 @@ createAlign({
     alt1: "The Radcliffe Line",
     alt2: "Propaganda from the AIML",
     imgAttr: [
-        ["onclick", "cycleImages(['assets/Radcliffe.png', 'assets/Propa.png'])"]
+        ["onclick", "cycleImages(['assets/Radcliffe.png', 'assets/Propa.png'], this)"]
     ],
     explain: `
     The All-India Muslim League was an organisation founded by Islamist separatists for a partitioned India, and its desired
@@ -62,7 +62,7 @@ createAlign({
     src: "assets/Brits.png",
     alt: "British Flag",
     imgAttr: [
-        ["onclick", "cycleImages(['assets/Brits.png', 'assets/BritRaj.png', 'assets/Gateway.png'])"]
+        ["onclick", "cycleImages(['assets/Brits.png', 'assets/BritRaj.png', 'assets/Gateway.png'], this)"]
     ],
     explain: `
     The British were the dominant European empire who emerged over South Asia after the Scrambles for Africa and India, and their oppressive Western methods caused 
