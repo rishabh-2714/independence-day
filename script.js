@@ -91,14 +91,20 @@ function createAlign(data, id) {
     const img=media.querySelector('img');
     img.src=data.src;
     if (data.src.includes("Radcliffe") && data.alt1) {
-        img.alt = data.alt1;
-    } else if (data.src.includes("Propa") && data.alt2) {
-        img.alt = data.alt2;
-    } else {
-        img.alt = data.alt;
+            img.alt = data.alt1;
+        } else if (data.src.includes("Propa") && data.alt2) {
+            img.alt = data.alt2;
+        } else {
+            img.alt = data.alt;
     }
     for(let i=0;i<data.imgAttr.length;i++){
-        img.setAttribute(data.imgAttr[i][0], data.imgAttr[i][1]);
+        if(data.imgAttr[i][0] === "onclick") {
+            img.onclick = function() {
+                cycleImages(data.imgAttr[i][1], this);
+            };
+        } else {
+            img.setAttribute(data.imgAttr[i][0], data.imgAttr[i][1]);
+        }
     }
     
     const explain=workspace.querySelector('.exp');
