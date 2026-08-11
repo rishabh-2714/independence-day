@@ -19,9 +19,7 @@ createAlign({
     mediaH: "Freedom Fighters",
     src: "assets/Gandhi.png",
     alt: "Image of a Freedom Fighter",
-    imgAttr: [
-        ["onclick", "cycleImages(fFs, this)"]
-    ],
+    srcArr: fFs,
     explain: `
     India's freedom was championed by many freedom fighters, such as Lal Bal Pal, Bhagat Singh, and the Indian National Congress
     among others, though they all differed on the way to accomplish it. There are two prominent eras: 
@@ -40,9 +38,7 @@ createAlign({
     src: "assets/Radcliffe.png",
     alt1: "The Radcliffe Line",
     alt2: "Propaganda from the AIML",
-    imgAttr: [
-        ["onclick", "cycleImages(['assets/Radcliffe.png', 'assets/Propa.png'], this)"]
-    ],
+    srcArr: ['assets/Radcliffe.png', 'assets/Propa.png'],
     explain: `
     The All-India Muslim League was an organisation founded by Islamist separatists for a partitioned India, and its desired
     Pakistan was created, albeit in a lesser form, which later partitioned with East Pakistan becoming Bangladesh. <br>
@@ -61,9 +57,7 @@ createAlign({
     mediaH: "Symbols of the British Raj", 
     src: "assets/Brits.png",
     alt: "British Flag",
-    imgAttr: [
-        ["onclick", "cycleImages(['assets/Brits.png', 'assets/BritRaj.png', 'assets/Gateway.png'], this)"]
-    ],
+    srcArr: ['assets/Brits.png', 'assets/BritRaj.png', 'assets/Gateway.png'],
     explain: `
     The British were the dominant European empire who emerged over South Asia after the Scrambles for Africa and India, and their oppressive Western methods caused 
     massacres in India leading to the final revolutions. While the Portuguese had Goa and the French had Pondicherry (Puducherry), the British had dominion across the 
@@ -98,14 +92,13 @@ function createAlign(data, id) {
             img.alt = data.alt;
     }
     for(let i=0;i<data.imgAttr.length;i++){
-        if(data.imgAttr[i][0] === "onclick") {
-            const srcArr = eval(data.imgAttr[i][1].match(/\[(.*?)\]/)[0]);
-            img.onclick = function() {
-                cycleImages(srcArr, this);
-            };
-        } else {
-            img.setAttribute(data.imgAttr[i][0], data.imgAttr[i][1]);
-        }
+        img.setAttribute(data.imgAttr[i][0], data.imgAttr[i][1]);
+    }
+    
+    if(data.srcArr) {
+        img.onclick = function() {
+            cycleImages(data.srcArr, this);
+        };
     }
     
     const explain=workspace.querySelector('.exp');
