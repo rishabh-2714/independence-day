@@ -12,7 +12,7 @@ function cycleImages(srcArr) {
 
 createAlign({
     mediaH: "Freedom Fighters",
-    src: "assets/Gandhi",
+    src: "assets/Gandhi.png",
     alt: "Image of a Freedom Fighter",
     imgAttr: [
         ["onclick", "cycleImages(fFs)"]
