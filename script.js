@@ -31,12 +31,13 @@ createAlign({
 }, 'ff')
 
 function createAlign(data, id) {
-    const temp=document.querySelector('#template');
-    if (!temp) {
-        console.error('Template not found');
-        return;
-    }
-    const workspace=temp.content.cloneNode(true);
+    const temp = document.querySelector('#template');
+  console.log('temp:', temp);
+  console.log('temp.content:', temp.content);
+  const workspace = temp.content.cloneNode(true);
+  console.log('workspace:', workspace);
+  console.log('workspace.children:', workspace.children);
+  console.log('workspace.firstElementChild:', workspace.firstElementChild);
     
     const media=workspace.querySelector('.pic');
     const mHead=media.querySelector('h2');
@@ -51,7 +52,7 @@ function createAlign(data, id) {
     const explain=workspace.querySelector('.exp');
     const exp=explain.querySelector('p');
     exp.innerHTML=data.explain;
-    workspace.querySelector('.align-off').style.backgroundColor=data.color;
+    workspace.firstElementChild.style.backgroundColor=data.color;
 
     console.log('About to append to:', document.getElementById(id));
     document.getElementById(id).appendChild(workspace);
