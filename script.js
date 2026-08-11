@@ -21,10 +21,10 @@ createAlign({
     India's freedom was championed by many freedom fighters, such as Lal Bal Pal, Bhagat Singh, and the Indian National Congress
     among others, though they all differed on the way to accomplish it. There are two prominent eras: 
     <ul>
-    <li>The early era, including revolutionaries like Lala Lapat Rai, Bal Gangadhar Tilak, and Bipin Chandra Pal (Lal Bal Pal),
+    <li>The early era, including revolutionaries like Lala Lajpat Rai, Bal Gangadhar Tilak, and Bipin Chandra Pal (Lal Bal Pal),
     as well as Mangal Pandey, Rani Lakshmibai of Jhansi, et cetera.</li>
     <li>The later era, consisting primarily of the Indian National Congress (MK Gandhi, Nehru, Vallabhbhai Patel, Maulana Azad, 
-    et cetera) and the All-India Muslim League (Muhammad Ali Jinnah, Liaquat Ali Khan, et cetera).
+    et cetera) and the All-India Muslim League (Muhammad Ali Jinnah, Liaquat Ali Khan, et cetera).</li>
     </ul>
     `,
     color: "rgb(255, 103, 31)"
