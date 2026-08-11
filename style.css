@@ -1,6 +1,10 @@
+* {
+    box-sizing: border-box;
+}
+
 .align,
 .align-off {
-    display: flex;
+    display: flex !important;
     gap: 5px;
     max-height: 750px;
 }
