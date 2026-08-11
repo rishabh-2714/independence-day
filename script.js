@@ -1,15 +1,34 @@
 const imgSrcs=["assets/IndiaFlag.png", "assets/IndiaEmblem.png", "assets/BengalTiger.png", "assets/Peacock.png", 
     "assets/Lotus.png", "assets/HapusMango.png", "assets/Banyan.png", "assets/IndianElephant.png"
 ];
+const fFs=["assets/Gandhi.png", "assets/Nehru.png", "assets/Jinnah.png", "assets/Maulana.png", "assets/Patel.png",
+    "assets/Liaquat.png", "assets/LBP.png", "assets/JhansiRani.png", "assets/Pandey.png"
+]
 let i=0;
-function cycleImages() {
-    i=(i<imgSrcs.length-1?i+1:0);
+function cycleImages(srcArr) {
+    i=(i<srcArr.length-1?i+1:0);
     document.getElementById('symbols').src=imgSrcs[i];
 }
 
 createAlign({
-    mediaH: "Freedom Fighters"
-})
+    mediaH: "Freedom Fighters",
+    src: "assets/Gandhi",
+    alt: "Image of a Freedom Fighter",
+    imgAttr: [
+        ["onclick", "cycleImages(fFs)"]
+    ],
+    explain: `
+    India's freedom was championed by many freedom fighters, such as Lal Bal Pal, Bhagat Singh, and the Indian National Congress
+    among others, though they all differed on the way to accomplish it. There are two prominent eras: 
+    <ul>
+    <li>The early era, including revolutionaries like Lala Lapat Rai, Bal Gangadhar Tilak, and Bipin Chandra Pal (Lal Bal Pal),
+    as well as Mangal Pandey, Rani Lakshmibai of Jhansi, et cetera.</li>
+    <li>The later era, consisting primarily of the Indian National Congress (MK Gandhi, Nehru, Vallabhbhai Patel, Maulana Azad, 
+    et cetera) and the All-India Muslim League (Muhammad Ali Jinnah, Liaquat Ali Khan, et cetera).
+    </ul>
+    `,
+    color: "rgb(255, 103, 31)"
+}, 'ff')
 
 function createAlign(data, id) {
     const temp=document.querySelector('#template');
@@ -19,10 +38,10 @@ function createAlign(data, id) {
     const mHead=media.querySelector('h2');
     mHead.innerHTML=data.mediaH;
     const img=media.querySelector('img');
-    img.src=data.Src;
-    img.alt=data.Alt;
+    img.src=data.src;
+    img.alt=data.alt;
     for(let i=0;i<data.imgAttr.length;i++){
-        img.style.setProperty(data.imgAttr[i][0], data.imgAttr[i][1]);
+        img.setAttribute(data.imgAttr[i][0], data.imgAttr[i][1]);
     }
     
     const explain=workspace.querySelector('.exp');
