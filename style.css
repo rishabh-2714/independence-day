@@ -63,6 +63,10 @@ h1 sup {
 }
 
 .pic img {
-    max-height: 99%;
+    max-height: 50%;
     width: auto;
+}
+
+div.align-off {
+    max-height: fit-content;
 }
