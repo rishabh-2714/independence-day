@@ -84,16 +84,6 @@ function createAlign(data, id) {
     mHead.innerHTML=data.mediaH;
     const img=media.querySelector('img');
     img.src=data.src;
-    if (data.src.includes("Radcliffe") && data.alt1) {
-            img.alt = data.alt1;
-        } else if (data.src.includes("Propa") && data.alt2) {
-            img.alt = data.alt2;
-        } else {
-            img.alt = data.alt;
-    }
-    for(let i=0;i<data.imgAttr.length;i++){
-        img.setAttribute(data.imgAttr[i][0], data.imgAttr[i][1]);
-    }
     
     if(data.srcArr) {
         img.onclick = function() {
