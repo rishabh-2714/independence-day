@@ -29,6 +29,10 @@ div:has(> img) {
     text-align: center;
 }
 
+.align-off div:has(p) {
+    align-self: center;
+}
+
 
 h1 {
     display: block;
