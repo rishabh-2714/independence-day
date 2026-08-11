@@ -67,6 +67,7 @@ h1 sup {
     width: auto;
 }
 
-div.align-off {
+div.align-off,
+div.align {
     max-height: fit-content;
 }

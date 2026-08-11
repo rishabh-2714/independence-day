@@ -37,7 +37,7 @@ function createAlign(data, id) {
   const workspace = temp.content.cloneNode(true);
   console.log('workspace:', workspace);
   console.log('workspace.children:', workspace.children);
-  console.log('workspace.firstElementChild:', workspace.firstElementChild);
+  console.log('workspace.children[1]:', workspace.children[1]);
     
     const media=workspace.querySelector('.pic');
     const mHead=media.querySelector('h2');
@@ -52,7 +52,9 @@ function createAlign(data, id) {
     const explain=workspace.querySelector('.exp');
     const exp=explain.querySelector('p');
     exp.innerHTML=data.explain;
-    workspace.firstElementChild.style.backgroundColor=data.color;
+    workspace.children[1].style.backgroundColor=data.color;
+
+    workspace.firstElementChild.style.color=data.color;
 
     console.log('About to append to:', document.getElementById(id));
     document.getElementById(id).appendChild(workspace);
