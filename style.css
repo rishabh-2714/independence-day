@@ -9,6 +9,7 @@
 .align-off > div {
     min-width:0;
     max-width:50vw;
+    flex: 1 1 0px;
 }
 
 .align-off p {
