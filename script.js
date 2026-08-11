@@ -30,6 +30,27 @@ createAlign({
     color: "rgb(255, 103, 31)"
 }, 'ff');
 
+createAlign({
+    mediaH: "Important Maps",
+    src: "assets/Radcliffe.png",
+    alt: `${img.src=="assets/Radcliffe.png"?"The Radcliffe Line":"Propaganda pro-Pakistan Map from the All-India Muslim League"}`,
+    imgAttr: [
+        ["onclick", "cycleImages(['assets/Radcliffe.png', 'assets/Propa.png'])"]
+    ],
+    explain: `
+    The All-India Muslim League was an organisation founded by Islamist separatists for a partitioned India, and its desired
+    Pakistan was created, albeit in a lesser form, which later partitioned with East Pakistan becoming Bangladesh. <br>
+    The Indian National Congress on the other hand, founded by disciples of Mahatma Mohandas Karamchand Gandhi, strongly 
+    wished for a united India, but the British reasoning of 'Divide and Conquer' and their rejection of previous plans that 
+    would create even a slightly loose federation caused them to lose the debate. <br>
+    Finally, the Partition was a bloody affair. The British called in a lawyer who knew nothing of the land, Cyril Radcliffe, 
+    who had never been west of Paris. He drew a line based on simple statistics from an office within five weeks for the 
+    quick exit the British needed, and the following massacre of the Partition as people crammed themselves onto trains and cattle
+    to reach the land representing their religion was so horrible he refused his fee and vowed never to return.
+    `,
+    color: "rgb(255, 255, 255)"
+}, 'ml');
+
 function createAlign(data, id) {
     const temp = document.querySelector('#template');
   console.log('temp:', temp);
