@@ -53,6 +53,7 @@ function createAlign(data, id) {
     exp.innerHTML=data.explain;
     workspace.style.backgroundColor=data.color;
 
-
+    console.log('About to append to:', document.getElementById(id));
     document.getElementById(id).appendChild(workspace);
+    console.log('Appended successfully');
 }
