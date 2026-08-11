@@ -8,7 +8,7 @@
 .align > *,
 .align-off > div {
     min-width:0;
-    flex: 1 1 0px;
+    flex: 1 1 33.3%;
 }
 
 .align-off p {
