@@ -78,6 +78,18 @@ createAlign({
     color: "rgb(4, 106, 56)"
 }, 'br');
 
+createAlign({
+    mediaH: "Images of Independence Celebrations",
+    src: "assets/USA.png",
+    alt: "Independence Celebration", 
+    srcArr: ['assets/USA.png', 'assets/Mexico.png', 'assets/Malaysia.png', 'assets/Ukraine.png'],
+    explain: `
+    India is not the only nation with an independence day. Every nation which has gained independnece from any European or Russian Empire, from the well-known Fourth of July in 
+    USA or 15<sup>th</sup> August in India to unknown days in Ukraine and Malaysia. Most often of all, this is independence from the British or FRrench Empire, just like India. 
+    `,
+    color: "rgb(6, 3, 141)"
+}, 'oi');
+
 function createAlign(data, id) {
     const temp = document.querySelector('#template');
   console.log('temp:', temp);
